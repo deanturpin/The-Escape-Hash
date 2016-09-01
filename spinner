@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# From here:
+# http://mywiki.wooledge.org/BashFAQ/034
+
+i=0;
+spinner='.oOo.'
+n=${#spinner}
+
+while true; do
+
+	printf \\b%s ${spinner:i++%n:1}
+	sleep .2
+done
