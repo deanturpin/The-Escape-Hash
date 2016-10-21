@@ -1,4 +1,25 @@
 #!/bin/bash
 
 echo Regular expressions
+hello='Hello!'
+echo
+
+echo Expression is \"$hello\"
+echo Does it contain punctuation?
 [[ 'hello!' =~ [[:punct:]] ]] && echo yes || echo no
+echo 
+
+blah='The quick brown dog'
+echo Expression is \"$blah\"
+echo blah is "$blah"
+echo 
+
+echo Expression contains brown?
+[[ $blah =~ brown|no ]]
+echo $BASH_REMATCH
+echo 
+
+echo blah contains blue
+[[ $blah =~ '(blue|no)' ]]
+echo $BASH_REMATCH
+echo 
