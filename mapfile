@@ -11,7 +11,7 @@ hosts=$(cat <<!
 mapfile array2 < <(echo $hosts)
 echo lines ${#array2[*]}
 
-# This every single number
+# This prints every single number
 for line in ${array2[*]}; do
 	echo $line
 done
